@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "name": "",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "rimraf": "^2.4.0",
+    "gulp-typescript": "^2.7.6",
+    "merge": "^1.2.0",
+    "requirejs": "^2.1.18"
+  }
+}
