@@ -2,7 +2,8 @@
     rimraf = require('rimraf'),
     ts = require('gulp-typescript'),
     merge = require('merge'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    fs = require("fs");
 
 eval("var project = " + fs.readFileSync("./project.json"));
 
