@@ -8,7 +8,8 @@
 eval("var project = " + fs.readFileSync("./project.json"));
 
 var paths = {
-    npm: 'node_modules',
+    npm: './node_modules/',
+    lib: "./" + project.webroot + "/lib/",
     tsSource: './TypeScript/app/**/*.ts',
     tsOutput: "./" + project.webroot + '/scripts/app/',
     tsDef: "./TypeScript/definitions/"
@@ -40,14 +41,13 @@ gulp.task('watch', ['ts-compile'], function () {
     gulp.watch(paths.tsDef, ['ts-compile']);
 });
 
-//TODO: Fix
 gulp.task("copy", function () {
     var npm = {
-        "requirejs": "jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+        "requirejs": "requirejs/require.js"
     }
 
-    for (var destinationDir in bower) {
-        gulp.src(paths.npm + bower[destinationDir])
+    for (var destinationDir in npm) {
+        gulp.src(paths.npm + npm[destinationDir])
           .pipe(gulp.dest(paths.lib + destinationDir));
     }
 });
