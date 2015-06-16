@@ -22,14 +22,14 @@ gulp.task("clean", function (cb) {
 var tsProject = ts.createProject({
     declarationFiles: true,
     noExternalResolve: true,
-    module: 'AMD',
-    removeComments: true
+    module: 'AMD'
+    //,
+    //removeComments: true
 });
 
 //TODO: Fix source maps
 gulp.task('ts-compile', function () {
-    var tsResult = gulp.src(paths.tsSource)
-					.pipe(ts(tsProject));
+    var tsResult = gulp.src(paths.tsSource).pipe(ts(tsProject));
 
     return merge([
 		tsResult.dts.pipe(gulp.dest(paths.tsDef)),
