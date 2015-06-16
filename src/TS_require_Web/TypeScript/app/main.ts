@@ -1,4 +1,4 @@
-﻿/// <reference path="../extdefinitions/tsd.d.ts" />
+﻿
 class Main {
 
     runString: string;

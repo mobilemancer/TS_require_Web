@@ -1,4 +1,4 @@
-﻿/// <reference path="../definitions/require.d.ts" />
+﻿/// <reference path="../extdefinitions/tsd.d.ts" />
 
 //file config.ts
 require.config({

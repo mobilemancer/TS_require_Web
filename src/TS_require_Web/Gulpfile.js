@@ -21,7 +21,7 @@ gulp.task("clean", function (cb) {
 
 var tsProject = ts.createProject({
     declarationFiles: true,
-    noExternalResolve: true,
+    noExternalResolve: false,
     module: 'AMD'
     //,
     //removeComments: true
