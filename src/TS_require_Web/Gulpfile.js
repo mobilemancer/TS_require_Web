@@ -2,7 +2,6 @@
     rimraf = require('rimraf'),
     ts = require('gulp-typescript'),
     merge = require('merge'),
-    sourcemaps = require('gulp-sourcemaps'),
     fs = require("fs");
 
 eval("var project = " + fs.readFileSync("./project.json"));
@@ -23,11 +22,8 @@ var tsProject = ts.createProject({
     declarationFiles: true,
     noExternalResolve: false,
     module: 'AMD'
-    //,
-    //removeComments: true
 });
 
-//TODO: Fix source maps
 gulp.task('ts-compile', function () {
     var tsResult = gulp.src(paths.tsSource).pipe(ts(tsProject));
 
