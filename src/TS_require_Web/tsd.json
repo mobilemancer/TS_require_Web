@@ -1,0 +1,12 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "TypeScript/extdefinitions",
+  "bundle": "TypeScript/extdefinitions/tsd.d.ts",
+  "installed": {
+    "requirejs/require.d.ts": {
+      "commit": "e18e130e2188348070f98d92b98c0ea481c4a086"
+    }
+  }
+}
