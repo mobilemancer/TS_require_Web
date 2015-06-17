@@ -1,6 +1,4 @@
-﻿
-class Main {
-
+﻿class Main {
     runString: string;
 
     constructor() {
